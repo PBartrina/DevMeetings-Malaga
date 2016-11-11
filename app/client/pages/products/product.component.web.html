@@ -1,0 +1,14 @@
+<div class="card product">
+    <div class="card-block row">
+        <div class="col-md-7">
+            <h4 class="card-title">{{product.name}}</h4>
+            <h6 class="card-subtitle text-muted">{{product.description}}</h6>
+        </div>
+    </div>
+
+    <div class="card-block text-sm-right">
+        <p>{{product.price | currency:'EUR'}}</p>
+        <button (click)="select(product)" class="btn btn-full">Load</button>
+        <button (click)="remove(product)" class="btn btn-outline">Remove</button>
+    </div>
+</div>

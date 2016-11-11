@@ -12,34 +12,34 @@ let receivedRoutes: Array<string> = [];
 let products: models.Product[] = [
             {
                 id: 1,
-                name: 'Product 1',
-                description: 'Description of product 1',
-                price: 23.45
+                name: 'Cervecita',
+                description: 'Tranquilos, que no es Cruzcampo',
+                price: 1.50
             }, {
                 id: 2,
-                name: 'Product 2',
-                description: 'Description of product 2',
-                price: 12.35
+                name: 'Pescaíto frito',
+                description: 'Pechá de crías de pescado que no quiere nadie',
+                price: 2.35
             }, {
                 id: 3,
-                name: 'Product 3',
-                description: 'Description of product 3',
-                price: 34.10
+                name: 'Coquinas',
+                description: 'Porque semos unos finos',
+                price: 5.00
             }, {
                 id: 4,
-                name: 'Product 4',
-                description: 'Description of product 4',
-                price: 23.45
+                name: 'Boquerones',
+                description: 'Pescados al lado de la Farola',
+                price: 3.45
             }, {
                 id: 5,
-                name: 'Product 5',
-                description: 'Description of product 5',
+                name: 'Jamón de bellota',
+                description: 'Con sus vetas de grasita rica',
                 price: 12.35
             }, {
                 id: 6,
-                name: 'Product 6',
-                description: 'Description of product 6',
-                price: 34.10
+                name: 'Tortilla',
+                description: 'CON cebolla',
+                price: 4.10
             }];
 
 
@@ -57,6 +57,7 @@ app.route(Routes.PRODUCT_DETAIL.url)
             res.status(404).send('No such product');
         }
     });
+
 app.route(Routes.TRACKING.url)
     .post((req, res) => {
         const routes: Array<string> = req.body.routes;

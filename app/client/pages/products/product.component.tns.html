@@ -1,0 +1,9 @@
+<GridLayout rows="*,*" columns="*,auto" class="p-5">
+    <Label row="0" col="0" [text]="product.name" class="h2 font-weight-bold m-5"></Label>
+    <Label row="1" col="0" [text]="product.description" class="body h3 m-5"></Label>
+    <Label row="0" col="1" [text]="product.price | currency:'EUR'" class="h2 m-5"></Label>
+</GridLayout>
+<GridLayout rows="auto" columns="*,*" class="p-5">
+    <Button col="0" (tap)="select(product)" text="Load" class="btn btn-primary btn-active img-rounded"></Button>
+    <Button col="1" (tap)="remove(product, productElement)" text="Destroy!" class="btn btn-outline btn-active img-rounded"></Button>
+</GridLayout>
