@@ -1,0 +1,29 @@
+<GridLayout rows="auto,*">
+    <StackLayout row="0" class="bg-primary">
+        <Label [text]="title" class="title font-weight-bold m-10"></Label>
+    </StackLayout>
+    <GridLayout row="1" rows="auto,*" class="fade-in">
+        <StackLayout row="0" class="bg-gray p-10">
+            <Label [text]="description" class="body h2 m-5" textWrap="true"></Label>
+            <Label *ngIf="loadedProduct" text="Loaded product: {{loadedProduct.name}}" class="body h3 fade-in m-5"></Label>
+        </StackLayout>
+        <GridLayout row="1" class="p-5">
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout *ngFor="let product of products" #productElement class="bg-gray border-1 border-gray m-10 p-5 img-rounded fade-in">
+                        <GridLayout rows="*,*" columns="*,auto" class="p-5">
+                            <Label row="0" col="0" [text]="product.name" class="h2 font-weight-bold m-5"></Label>
+                            <Label row="1" col="0" [text]="product.description" class="body h3 m-5"></Label>
+                            <Label row="0" col="1" [text]="product.price | currency:'EUR'" class="h2 m-5"></Label>
+                        </GridLayout>
+                        <GridLayout rows="auto" columns="*,*" class="p-5">
+                            <Button col="0" (tap)="select(product)" text="Load" class="btn btn-primary btn-active img-rounded"></Button>
+                            <Button col="1" (tap)="remove(product, productElement)" text="Destroy!" class="btn btn-outline btn-active img-rounded"></Button>
+                        </GridLayout>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </GridLayout>
+    </GridLayout>
+</GridLayout>
+

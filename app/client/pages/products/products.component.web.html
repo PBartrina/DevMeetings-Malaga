@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 jumbotron">
+            <h1 class="display-3">{{title}}</h1>
+            <p class="lead">{{description}}</p>
+            <p *ngIf="loadedProduct">Loaded product: {{loadedProduct.name}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4" *ngFor="let product of products">
+            <div class="card product">
+                <div class="card-block row">
+                    <div class="col-md-7">
+                        <h4 class="card-title">{{product.name}}</h4>
+                        <h6 class="card-subtitle text-muted">{{product.description}}</h6>
+                    </div>
+                </div>
+
+                <div class="card-block text-sm-right">
+                    <p>{{product.price | currency:'EUR'}}</p>
+                    <button (click)="select(product)" class="btn btn-full">Load</button>
+                    <button (click)="remove(product)" class="btn btn-outline">Remove</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

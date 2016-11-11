@@ -1,0 +1,68 @@
+/*
+    This file is imported from app/app.scss in webapp mode
+*/
+
+@import 'styles/_variables.scss';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+h1 {
+    color: $brand-primary;
+}
+
+.btn-outline{
+    padding: 10px;
+    background-color: transparent;
+    color: $brand-primary;
+    border: 2px solid $btn-primary-bg;
+    border-radius: 5px;
+}
+
+.btn-outline:hover{
+    padding: 10px;
+    background-color: $btn-primary-bg;
+    color: $gray-lightest;
+    border: 2px solid $btn-primary-bg;
+    border-radius: 5px;
+}
+
+.btn-outline:active{
+    padding: 10px;
+    background-color: lighten($brand-primary, 40%);
+    color: $gray-lightest;
+    border: 2px solid $btn-primary-bg;
+    border-radius: 5px;
+}
+
+.btn-full{
+    padding: 10px;
+    background-color: $btn-primary-bg;
+    color: $gray-lightest;
+    border: 2px solid $btn-primary-bg;
+    border-radius: 5px;
+}
+
+.btn-full:hover{
+    padding: 10px;
+    background-color: transparent;
+    color: $brand-primary;
+    border: 2px solid $btn-primary-bg;
+    border-radius: 5px;
+}
+
+.btn-full:active{
+    padding: 10px;
+    background-color: $btn-color-secondary;
+    color: $gray-lightest;
+    border: 2px solid $btn-color-secondary;
+    border-radius: 5px;
+}
+
+.navbar-custom-brand{
+    background-color: $brand-primary;
+    color: $gray-lightest;
+    border-radius: 0;
+}
+
+.product{
+    background-color: $gray-lighter;
+}

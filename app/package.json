@@ -1,0 +1,9 @@
+{
+	"nativescript": {
+		"id": "org.appverse.pang"
+	},
+	"main": "main.tns.js",
+	"android": {
+		"v8Flags": "--expose_gc"
+	}
+}

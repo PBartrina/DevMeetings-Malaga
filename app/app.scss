@@ -1,0 +1,8 @@
+/*
+    This is the global styles entry point.
+
+    - Nativescript loads by default /app/app.css
+    - The Webapp (main.web.ts) calls require('./app.scss')
+*/
+
+@import 'styles/app.tns.scss';

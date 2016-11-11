@@ -1,0 +1,46 @@
+/*
+    This file is imported from app/app.scss in nativescript mode
+*/
+@import 'styles/_variables.scss';
+// Bootstrap map
+@import '../node_modules/nativescript-theme-core/bootstrap-map.scss';
+
+.android {
+    @import '../node_modules/nativescript-theme-core/core.light.android.scss';
+}
+
+.ios {
+    @import '../node_modules/nativescript-theme-core/core.light.ios.scss';
+}
+
+.title {
+    color: $gray-lightest;
+    font-size: 34;
+}
+
+.bg-gray {
+    background-color: $gray-lighter;
+}
+
+.border-gray {
+    border-color: $gray-light;
+}
+
+.border-1 {
+    border-width: 1;
+}
+
+.fade-in {
+    animation-name: fade-in;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+    	from{
+                    opacity: 0;
+        }
+        100%{
+                    opacity: 1;
+        }
+}

@@ -1,0 +1,21 @@
+.unselected{
+    animation-name: selected;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+}
+
+.selected{
+    animation-name: selected;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes selected {
+    	from{
+                    opacity: .5;
+        }
+        100%{
+                    opacity: 1;
+        }
+}

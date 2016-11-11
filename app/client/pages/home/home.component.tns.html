@@ -1,0 +1,11 @@
+<GridLayout rows="auto,auto,*" class="android">
+    <StackLayout row="0" class="bg-primary">
+        <Label [text]="title" class="title font-weight-bold m-10"></Label>
+    </StackLayout>
+    <StackLayout row="1" class="bg-gray p-10 fade-in">
+        <Label [text]="description" textWrap="true" class="body h3 m-5"></Label>
+        <StackLayout class="hr-light m-5"></StackLayout>
+        <Label text="Navigation is shared.." class="footnote m-5"></Label>
+        <Button [nsRouterLink]="['/products']" text="Let's go to next page!" class="btn btn-outline btn-active img-rounded m-5"></Button>
+    </StackLayout>
+</GridLayout>
